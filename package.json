@@ -1,0 +1,52 @@
+{
+  "author": "Project",
+  "dependencies": {
+    "mf-bundler": "1.5.1"
+  },
+  "description": "React micro frontend bootstrap",
+  "devDependencies": {
+    "mockserver": "^3.1.1",
+    "npm-watch": "^0.6.0"
+  },
+  "keywords": [
+    "micro frontends"
+  ],
+  "license": "MIT",
+  "mf-maestro": {
+    "entities": [
+      {
+        "name": "domain",
+        "build_folder": "./dist",
+        "exclude_folders": [
+          "./apps/entity-detail/dist",
+          "./apps/entity-master/dist",
+          "./apps/entity-new/dist",
+          "./apps/entity-edit/dist"
+        ],
+        "src_folder": "apps"
+      }
+    ]
+  },
+  "name": "domain",
+  "scripts": {
+    "build": "mf-bundle -d domain -p /assets/domain",
+    "clean": "mf-clean",
+    "dependencies": "mf-install",
+    "postinstall": "npm run dependencies",
+    "start": "mf-serve",
+    "test": "npm run mocks & mf-test && kill $(lsof -t -i:5000 -sTCP:LISTEN)",
+    "watch": "npm-watch",
+    "mocks": "./node_modules/.bin/mockserver -p 5000 -m './mocks'"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "./apps/entity-detail/src",
+        "./apps/entity-master/src",
+        "./apps/entity-new/src",
+        "./apps/entity-edit/src"
+      ],
+      "extensions": "css,js,jsx,scss,styl,ts,tsx"
+    }
+  }
+}

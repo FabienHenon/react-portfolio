@@ -1,0 +1,40 @@
+HTTP/1.1 200 OK
+Content-Type: application/vnd.api+json
+Access-Control-Allow-Origin: *
+
+{
+    "data": [
+        {
+            "id": "my-id-1",
+            "type": "users",
+            "attributes": {
+                "firstname": "John",
+                "lastname": "Doe"
+            }
+        },
+        {
+            "id": "my-id-2",
+            "type": "users",
+            "attributes": {
+                "firstname": "Sarah",
+                "lastname": "Connor"
+            }
+        },
+        {
+            "id": "my-id-3",
+            "type": "users",
+            "attributes": {
+                "firstname": "M.",
+                "lastname": "Bean"
+            }
+        },
+        {
+            "id": "my-id-4",
+            "type": "users",
+            "attributes": {
+                "firstname": "Lili",
+                "lastname": "Pop"
+            }
+        }
+    ]
+}

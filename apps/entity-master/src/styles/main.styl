@@ -1,0 +1,70 @@
+
+.m-entity-master {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  width: 50rem;
+
+  .header {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
+
+    > .close {
+      cursor: pointer;
+      margin-left: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .edit, .delete {
+    cursor: pointer;
+    margin-left: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .entities {
+    border: 1px solid #000;
+    width: 100%;
+
+    .entity {
+      border: 1px solid #000;
+
+      &:hover {
+        background-color: #eee;  
+      }
+
+      &__firstname {
+        margin-bottom: 1rem;
+
+        &__label {
+          font-weight: 900;
+          margin-right: 1rem;
+        }
+
+        &__value {}
+      }
+
+      &__lastname {
+        &__label {
+          font-weight: 900;
+          margin-right: 1rem;
+        }
+
+        &__value {}
+      }
+    }
+  }
+}

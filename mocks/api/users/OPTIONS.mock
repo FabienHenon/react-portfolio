@@ -1,0 +1,7 @@
+HTTP/1.1 204 OK
+access-control-allow-credentials: true
+access-control-allow-headers: Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since,X-CSRF-Token
+access-control-allow-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+access-control-allow-origin: *
+access-control-expose-headers: 
+access-control-max-age: 1728000
